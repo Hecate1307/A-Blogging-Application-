@@ -1,0 +1,33 @@
+<div class="Not-found" *ngIf="Posts.length === 0">
+    <mat-icon class="error-icon">error</mat-icon>
+    <h3>Oops!</h3>
+    <p>No Favourite Products Found</p>
+    <p>Please, choose your favourite products</p>
+</div>
+
+
+<div class="" *ngIf="Posts.length !== 0">
+
+    <div class="title">
+        <!-- <mat-icon color="primary">favorite_border</mat-icon> -->
+        Your Favorite Posts:
+    </div>
+
+    <ul *ngFor="let post of Posts">
+        <li class="item">
+            <a href="#">{{post.title}}</a>
+            <button mat-icon-button color="primary" class="delete-icon" (click)="onRemoveItem(post.id)">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </li>
+    </ul>
+
+</div>
+
+
+
+
+<!-- <button mat-icon-button (click)="showFiller = !showFiller" mat-raised-button>
+    <mat-icon *ngIf="!showFiller">chevron_right</mat-icon>
+    <mat-icon *ngIf="showFiller">chevron_left</mat-icon>
+</button> -->

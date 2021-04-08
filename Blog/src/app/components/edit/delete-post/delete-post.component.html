@@ -1,0 +1,12 @@
+<h2 mat-dialog-title>Delete</h2>
+
+<mat-dialog-content>
+    <p>Please Confirm: </p>
+    <hr>
+    <p>Do you really want to delete the post?</p>
+</mat-dialog-content>
+
+<mat-dialog-actions class="d-flex justify-content-between">
+    <button type="submit" mat-button mat-raised-button (click)="save()">Confirm</button>
+    <button type="button" mat-button mat-raised-button (click)="close()">Cancel</button>
+</mat-dialog-actions>

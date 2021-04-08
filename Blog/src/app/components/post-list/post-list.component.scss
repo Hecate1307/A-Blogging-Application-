@@ -1,0 +1,148 @@
+.post-container{
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;   
+    margin-top: 1%;
+    justify-content:space-between;
+}
+
+.newPost{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 30px;
+    text-decoration:none;
+    color: palevioletred;
+}
+
+.like-list{
+    margin-right: 2%;
+    font-size: 36px;
+}
+
+.favorite{
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    .mat-icon {
+      font-size: 40px;
+      width: 48px;
+      height: 48px;
+      line-height: 48px;
+    }
+}
+.search-results{
+    margin-top: 20px;
+}
+
+.post-grounp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+    flex-wrap: wrap;
+    width: 90%;
+}
+.post,.emptyCard {  
+    border-radius: 3px;
+    margin: 0.7rem;
+    width: 15rem;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: baseline;
+}
+.post{
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-bottom: 1px solid gray;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.post_head { 
+    width: 15rem;
+    height: 13vh;
+    padding: 1.5% 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post_title {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 700;
+    overflow: hidden;
+}
+
+.emptyCard {
+    border: none;
+    user-select: none;
+    // background-color:white;
+    box-shadow:none;
+  }
+
+.post-body{
+    color: gray;
+    font-size: 0.7rem;
+    height: 11vh;
+    overflow: scroll;
+    padding: 1% 2%;
+
+}
+
+.edit{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2%;
+    button{
+        height: 100%;
+        border-radius: 10px;
+        color: white;
+    }
+    .update_post{
+        background-color: palevioletred;
+
+    }
+    .delete_post{
+        background-color: rgb(0, 153, 255);
+    }
+}
+
+.sidenav{
+    width: 20rem;
+}
+
+.nav-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .nav-icon{
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
+        .mat-icon {
+          font-size: 40px;
+          width: 48px;
+          height: 48px;
+          line-height: 48px;
+        }
+    }
+    h2{
+        color: gray;
+        font-weight: 600;
+    }
+}
+
+
+
