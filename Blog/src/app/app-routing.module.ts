@@ -7,22 +7,31 @@ const routes: Routes = [
     {
         path: '',
         component: PostListComponent,
-        pathMatch: 'full',
+        pathMatch: 'full'
     },
     {
-        path: ':id',
-        component: PostDetailComponent,
-        pathMatch: 'full',
+        path: 'posts',
+        component: PostListComponent,
+        children: [
+            { path: ':id', component: PostDetailComponent, pathMatch: 'full', }
+        ]
     },
     {
-        path: '**',
-        redirectTo: '',
-        pathMatch: 'full',
+        path: 'auth',
+        // loadChildren: './auth/auth.module#AuthModule'
+        loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
+        pathMatch: 'full'
     },
+    // {
+    //     path: '**',
+    //     redirectTo: '',
+    //     pathMatch: 'full',
+    // },
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forRoot(routes),
+    ],
     exports: [RouterModule],
 })
 export class AppRoutingModule { }

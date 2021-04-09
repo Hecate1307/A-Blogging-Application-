@@ -23,8 +23,8 @@ import { PostDetailComponent } from './components/post-list/post-detail/post-det
     DeletePostComponent,
     NewPostComponent,
     FavoritePostComponent,
-    PostDetailComponent
-  ],
+    PostDetailComponent],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
